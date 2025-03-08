@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Photo Gallery</title>
+    <style>
+        #image {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .preview {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="addTabFocus()">
+
+    <h1>Accessible Photo Gallery</h1>
+    <p>Hover over or focus on an image to display it.</p>
+
+    <div id="image">Hover over an image below to display here.</div>
+
+    <div>
+        <img class="preview" src="image1.jpg" alt="A beautiful sunset over the ocean" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+             
+        <img class="preview" src="image2.jpg" alt="A forest trail surrounded by green trees" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" src="image3.jpg" alt="A city skyline at night with bright lights" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" src="image4.jpg" alt="A snowy mountain landscape" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" src="image5.jpg" alt="A close-up of a blooming sunflower" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" src="image6.jpg" alt="A peaceful beach with clear blue water" 
+             onmouseover="upDate(this)" onmouseleave="undo()" 
+             onfocus="upDate(this)" onblur="undo()">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
